@@ -8,17 +8,17 @@ import colors from './styles/colors';
 const App = createStackNavigator();
 
 const Routes: React.FC = () => (
-  <App.Navigator
-      screenOptions={{
-        headerShown: false,
-        cardStyle: {
-          backgroundColor: colors.primary,
-        },
-      }}
-      initialRouteName="SignIn"
+    <App.Navigator
+        screenOptions={{
+            headerShown: false,
+            cardStyle: {
+                backgroundColor: colors.primary,
+            },
+        }}
+        initialRouteName="SignIn"
     >
-      <App.Screen name="SignIn" component={Login} />
-  </App.Navigator>
+        <App.Screen name="SignIn" component={Login} />
+    </App.Navigator>
 );
 
 export default Routes;
