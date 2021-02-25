@@ -1,17 +1,24 @@
 import React from 'react';
-import { View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from './pages/Home';
+import Login from './pages/Login';
+import colors from './styles/colors';
 
-const { Navigator, Screen } = createBottomTabNavigator();
+const App = createStackNavigator();
 
 const Routes: React.FC = () => (
-  <NavigationContainer>
-    <Navigator>
-      <Screen name="Home" component={Home} />
-    </Navigator>
-  </NavigationContainer>
+  <App.Navigator
+      screenOptions={{
+        headerShown: false,
+        cardStyle: {
+          backgroundColor: colors.primary,
+        },
+      }}
+      initialRouteName="SignIn"
+    >
+      <App.Screen name="SignIn" component={Login} />
+  </App.Navigator>
 );
 
 export default Routes;

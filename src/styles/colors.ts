@@ -1,6 +1,6 @@
 export default {
-  background: '#FFFFFF',
-  backgroud_input: '#a1a1a1',
+  primary: '#FFFFFF',
+  backgroud_input: '#F0F0F0',
   text_bellow_input: '#333333',
   place_holder: '#55606D',
   text_link: '#0B1A43',
