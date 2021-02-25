@@ -1,13 +1,19 @@
 import React from 'react';
+import { TextInputProps } from 'react-native';
 
-import { Text } from 'react-native';
+import { Container, TextInput } from './styles';
+import colors from '../../styles/colors';
 
-import { Container } from './styles';
-
-const Input: React.FC = () => {
+const Input: React.FC<TextInputProps> = (
+  { children, ...rest }
+) => {
   return (
-    <Container>
-      <Text>Input</Text>
+    <Container {...rest}>
+      <TextInput
+        keyboardAppearance="dark"
+        placeholderTextColor={colors.place_holder}
+        {...rest}
+      />
     </Container>
   );
 };
