@@ -9,7 +9,8 @@ export const Container = styled.View`
     background: ${colors.primary};
     align-items: center;
     justify-content: center;
-    padding: 0 30px ${Platform.OS === 'android' ? 150 : 40}px;
+    width: 100%;
+    padding-top: ${Platform.OS === 'android' ? 150 : 40}px;
 `;
 
 export const Title = styled.Text`
@@ -17,6 +18,14 @@ export const Title = styled.Text`
     color: ${colors.blue};
     font-weight: bold;
     margin: 37px 0 6px;
+`;
+
+export const MainContent = styled.View`
+    align-items: center;
+    margin-top: 10%;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 `;
 
 export const SubTitle = styled.Text`
@@ -47,6 +56,7 @@ export const ForgotPasswordText = styled.Text`
 
 export const RegisterAccount = styled.View`
     margin-top: 53px;
+    margin-bottom: 25px;
 `;
 
 export const RegisterAccountText = styled.Text`
@@ -58,26 +68,6 @@ export const RegisterAccountButton = styled.TouchableOpacity``;
 export const RegisterAccountButtonText = styled.Text`
     color: ${colors.text_link};
     font-weight: bold;
-`;
-
-export const CreateAccountButton = styled.TouchableOpacity`
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: #312e38;
-    border-top-width: 1px;
-    border-color: #232129;
-    padding: 16px 0 ${16 + getBottomSpace()}px;
-
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-`;
-export const CreateAccountButtonText = styled.Text`
-    color: #ff9000;
-    font-size: 18px;
-    margin-left: 16px;
 `;
 
 export const Form = styled(Unform)`

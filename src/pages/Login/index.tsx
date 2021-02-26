@@ -39,47 +39,58 @@ const Login: React.FC = () => {
                 keyboardShouldPersistTaps="handled"
             >
                 <Container>
-                    <Image style={{ marginTop: 120 }} source={logoImg} />
+                    <Image source={logoImg} />
 
-                    <View style={{ alignItems: 'center' }}>
-                        <Title>Bem Vindo</Title>
-                        <SubTitle>Entre com seu e-mail e senha</SubTitle>
-                    </View>
-
-                    <Form onSubmit={() => {}}>
-                        <GroupInputs>
-                            <Input style={{ height: 44 }} placeholder="E-mail" />
-                            <Input style={{ height: 44 }} placeholder="E-mail" />
-                        </GroupInputs>
-
-                        <ViewButton>
-                            <Button onPress={() => {}}>Entrar</Button>
-                        </ViewButton>
-                    </Form>
-
-                    <ForgotPassword
-                        onPress={() => {
-                            console.log('esqueci :s');
+                    <MainContent
+                        style={{
+                            elevation: 1,
+                            shadowOffset: { width: 1, height: 1 },
+                            shadowColor: colors.shadow,
+                            shadowOpacity: 0.5,
                         }}
                     >
-                        <ForgotPasswordText>Esqueceu sua senha?</ForgotPasswordText>
-                    </ForgotPassword>
+                        <View style={{ alignItems: 'center', marginTop: 37 }}>
+                            <Title>Bem Vindo</Title>
+                            <SubTitle>Entre com seu e-mail e senha</SubTitle>
+                        </View>
 
-                    <RegisterAccount>
-                        <RegisterAccountButton
+                        <Form onSubmit={() => {}}>
+                            <GroupInputs>
+                                <Input style={{ height: 44 }} placeholder="E-mail" />
+                                <Input style={{ height: 44 }} placeholder="Senha" />
+                            </GroupInputs>
+
+                            <ViewButton>
+                                <Button onPress={() => {}}>Entrar</Button>
+                            </ViewButton>
+                        </Form>
+
+                        <ForgotPassword
                             onPress={() => {
                                 console.log('esqueci :s');
                             }}
                         >
-                            <RegisterAccountText>
-                                Não possui uma conta?
-                                <RegisterAccountButtonText>
-                                    {' '}
-                                    Cadastre-se
-                                </RegisterAccountButtonText>
-                            </RegisterAccountText>
-                        </RegisterAccountButton>
-                    </RegisterAccount>
+                            <ForgotPasswordText>
+                                Esqueceu sua senha?
+                            </ForgotPasswordText>
+                        </ForgotPassword>
+
+                        <RegisterAccount>
+                            <RegisterAccountButton
+                                onPress={() => {
+                                    console.log('esqueci :s');
+                                }}
+                            >
+                                <RegisterAccountText>
+                                    Não possui uma conta?
+                                    <RegisterAccountButtonText>
+                                        {' '}
+                                        Cadastre-se
+                                    </RegisterAccountButtonText>
+                                </RegisterAccountText>
+                            </RegisterAccountButton>
+                        </RegisterAccount>
+                    </MainContent>
                 </Container>
             </ScrollView>
         </KeyboardAvoidingView>
