@@ -1,18 +1,26 @@
 import React from 'react';
 
-import { Image } from 'react-native';
+import {
+    Image,
+    KeyboardAvoidingView,
+    ScrollView,
+    Platform,
+    View,
+} from 'react-native';
 import {
     Container,
-    Content,
-    ForgotPasswordLinkContainer,
-    ForgotPasswordLinkText,
-    RegisterContainer,
-    RegisterText,
-    RegisterLinkText,
-    WelcomeContainer,
-    WelcomeText,
-    FormView,
-    ViewInputs,
+    ForgotPassword,
+    ForgotPasswordText,
+    Form,
+    Title,
+    SubTitle,
+    GroupInputs,
+    ViewButton,
+    RegisterAccountText,
+    RegisterAccount,
+    RegisterAccountButton,
+    RegisterAccountButtonText,
+    MainContent,
 } from './styles';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
@@ -21,52 +29,60 @@ import logoImg from '../../assets/Logo.png';
 
 const Login: React.FC = () => {
     return (
-        <Container>
-            <Image source={logoImg} />
-            <Content
-                style={{
-                    elevation: 1,
-                    shadowOffset: { width: 1, height: 1 },
-                    shadowColor: colors.shadow,
-                    shadowOpacity: 0.5,
-                }}
+        <KeyboardAvoidingView
+            style={{ flex: 1 }}
+            behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+            enabled
+        >
+            <ScrollView
+                contentContainerStyle={{ flex: 1 }}
+                keyboardShouldPersistTaps="handled"
             >
-                <WelcomeContainer>
-                    <WelcomeText>Bem Vindo</WelcomeText>
-                    <RegisterText>Entre com seu e-mail e senha</RegisterText>
-                </WelcomeContainer>
+                <Container>
+                    <Image style={{ marginTop: 120 }} source={logoImg} />
 
-                <FormView>
-                    <ViewInputs>
-                        <Input
-                            style={{ height: 44, width: 327 }}
-                            placeholder="E-mail"
-                        />
-                        <Input
-                            style={{ height: 44, width: 327 }}
-                            placeholder="Senha"
-                        />
-                    </ViewInputs>
+                    <View style={{ alignItems: 'center' }}>
+                        <Title>Bem Vindo</Title>
+                        <SubTitle>Entre com seu e-mail e senha</SubTitle>
+                    </View>
 
-                    <Button style={{ height: 44, width: 311 }} onPress={() => {}}>
-                        Login
-                    </Button>
-                </FormView>
+                    <Form onSubmit={() => {}}>
+                        <GroupInputs>
+                            <Input style={{ height: 44 }} placeholder="E-mail" />
+                            <Input style={{ height: 44 }} placeholder="E-mail" />
+                        </GroupInputs>
 
-                <ForgotPasswordLinkContainer>
-                    <ForgotPasswordLinkText>
-                        Esqueceu sua senha?
-                    </ForgotPasswordLinkText>
-                </ForgotPasswordLinkContainer>
+                        <ViewButton>
+                            <Button onPress={() => {}}>Entrar</Button>
+                        </ViewButton>
+                    </Form>
 
-                <RegisterContainer>
-                    <RegisterText>
-                        Não possui uma conta?
-                        <RegisterLinkText> Cadastre-se</RegisterLinkText>
-                    </RegisterText>
-                </RegisterContainer>
-            </Content>
-        </Container>
+                    <ForgotPassword
+                        onPress={() => {
+                            console.log('esqueci :s');
+                        }}
+                    >
+                        <ForgotPasswordText>Esqueceu sua senha?</ForgotPasswordText>
+                    </ForgotPassword>
+
+                    <RegisterAccount>
+                        <RegisterAccountButton
+                            onPress={() => {
+                                console.log('esqueci :s');
+                            }}
+                        >
+                            <RegisterAccountText>
+                                Não possui uma conta?
+                                <RegisterAccountButtonText>
+                                    {' '}
+                                    Cadastre-se
+                                </RegisterAccountButtonText>
+                            </RegisterAccountText>
+                        </RegisterAccountButton>
+                    </RegisterAccount>
+                </Container>
+            </ScrollView>
+        </KeyboardAvoidingView>
     );
 };
 
