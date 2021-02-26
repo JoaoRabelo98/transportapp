@@ -14,4 +14,5 @@ export default {
     purple: '#bf94ff',
     blue: '#3F577B',
     shadow: '#a1a1a1',
+    icons: '#243668',
 };

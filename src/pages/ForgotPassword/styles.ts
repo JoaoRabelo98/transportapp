@@ -9,17 +9,26 @@ export const Container = styled.View`
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-top: ${Platform.OS === 'android' ? 150 : 40}px;
+    padding-top: ${Platform.OS === 'android' ? 80 : 40}px;
+`;
+
+export const Header = styled.View`
+    margin-top: 0;
+    width: 100%;
+    height: 94px;
+    position: relative;
 `;
 
 export const MainContent = styled.View`
     align-items: center;
-    margin-top: 20%;
+    margin-top: 30%;
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding-bottom: 20%;
 `;
+
+export const BackButton = styled.TouchableOpacity``;
 
 export const Title = styled.Text`
     font-size: 25px;
