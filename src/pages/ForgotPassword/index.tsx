@@ -21,6 +21,7 @@ import {
     RegisterAccountButton,
     RegisterAccountButtonText,
     MainContent,
+    SubTitleContent,
 } from './styles';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
@@ -55,50 +56,24 @@ const Login: React.FC = () => {
                         }}
                     >
                         <View style={{ alignItems: 'center', marginTop: 37 }}>
-                            <Title>Bem Vindo</Title>
-                            <SubTitle>Entre com seu e-mail e senha</SubTitle>
+                            <Title>Forgot password</Title>
+                            <SubTitleContent>
+                                <SubTitle>
+                                    Por favor, indique o seu endereço de e-mail. Você
+                                    recebera um código para criar uma nova senha
+                                </SubTitle>
+                            </SubTitleContent>
                         </View>
 
                         <Form onSubmit={() => {}}>
                             <GroupInputs>
                                 <Input style={{ height: 44 }} placeholder="E-mail" />
-                                <Input
-                                    style={{ height: 44 }}
-                                    placeholder="Senha"
-                                    secureTextEntry={true}
-                                />
                             </GroupInputs>
 
                             <ViewButton>
                                 <Button onPress={() => {}}>Entrar</Button>
                             </ViewButton>
                         </Form>
-
-                        <ForgotPassword
-                            onPress={() => {
-                                console.log('esqueci :s');
-                            }}
-                        >
-                            <ForgotPasswordText>
-                                Esqueceu sua senha?
-                            </ForgotPasswordText>
-                        </ForgotPassword>
-
-                        <RegisterAccount>
-                            <RegisterAccountButton
-                                onPress={() => {
-                                    console.log('esqueci :s');
-                                }}
-                            >
-                                <RegisterAccountText>
-                                    Não possui uma conta?
-                                    <RegisterAccountButtonText>
-                                        {' '}
-                                        Cadastre-se
-                                    </RegisterAccountButtonText>
-                                </RegisterAccountText>
-                            </RegisterAccountButton>
-                        </RegisterAccount>
                     </MainContent>
                 </Container>
             </ScrollView>
