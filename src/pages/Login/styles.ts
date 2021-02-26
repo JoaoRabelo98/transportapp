@@ -22,10 +22,11 @@ export const Title = styled.Text`
 
 export const MainContent = styled.View`
     align-items: center;
-    margin-top: 10%;
+    margin-top: 20%;
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    padding-bottom: 20%;
 `;
 
 export const SubTitle = styled.Text`
@@ -56,7 +57,6 @@ export const ForgotPasswordText = styled.Text`
 
 export const RegisterAccount = styled.View`
     margin-top: 53px;
-    margin-bottom: 25px;
 `;
 
 export const RegisterAccountText = styled.Text`

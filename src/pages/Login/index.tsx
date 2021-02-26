@@ -43,10 +43,15 @@ const Login: React.FC = () => {
 
                     <MainContent
                         style={{
-                            elevation: 1,
-                            shadowOffset: { width: 1, height: 1 },
                             shadowColor: colors.shadow,
-                            shadowOpacity: 0.5,
+                            shadowOffset: {
+                                width: 0,
+                                height: 1,
+                            },
+                            shadowOpacity: 0.18,
+                            shadowRadius: 1.0,
+
+                            elevation: 1,
                         }}
                     >
                         <View style={{ alignItems: 'center', marginTop: 37 }}>
