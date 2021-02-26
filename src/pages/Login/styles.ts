@@ -5,23 +5,29 @@ import colors from '../../styles/colors';
 export const Container = styled.View`
     flex: 1;
     align-items: center;
-    width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: ${colors.primary};
+    padding-top: ${Platform.OS === 'android' ? 150 : 40}px;
 `;
 
 export const Content = styled.View`
-    padding: 0 30px ${Platform.OS === 'android' ? 150 : 40}px;
     flex: 1;
     align-items: center;
     font-size: 14px;
     color: ${colors.place_holder};
     justify-content: center;
+    margin-top: 20%;
     width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+`;
+
+export const FormView = styled.View`
+    margin-top: 40px;
+    align-items: center;
 `;
 
 export const WelcomeContainer = styled.View`
-    margin-bottom: 60px;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -29,9 +35,9 @@ export const WelcomeContainer = styled.View`
 
 export const WelcomeText = styled.Text`
     font-size: 25px;
+    margin-top: 6px;
     color: ${colors.text_link};
     font-weight: bold;
-    margin-bottom: 6px;
 `;
 
 export const ForgotPasswordLinkContainer = styled.View`
@@ -64,14 +70,8 @@ export const RegisterLinkText = styled.Text`
     font-weight: bold;
 `;
 
-export const BorderContainer = styled.View`
-    margin-top: 100%;
-    height: 50px;
-    border: 1px;
-    border-color: ${colors.primary};
-    border-bottom-color: transparent;
-    border-radius: 50px;
-    width: 100%;
-    box-shadow: 0 -5px 3px #0000005f;
-    align-self: center;
+export const ViewInputs = styled.View`
+    flex: 1;
+    justify-content: space-around;
+    max-height: 128px;
 `;

@@ -4,7 +4,7 @@ import { TextInputProps } from 'react-native';
 import { Container, TextInput } from './styles';
 import colors from '../../styles/colors';
 
-const Input: React.FC<TextInputProps> = ({ children, ...rest }) => {
+const Input: React.FC<TextInputProps> = ({ ...rest }) => {
     return (
         <Container {...rest}>
             <TextInput
