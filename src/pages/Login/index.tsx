@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import {
     Image,
@@ -7,6 +7,7 @@ import {
     Platform,
     View,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import {
     Container,
     ForgotPassword,
@@ -28,6 +29,13 @@ import colors from '../../styles/colors';
 import logoImg from '../../assets/Logo.png';
 
 const Login: React.FC = () => {
+    const { navigate } = useNavigation();
+
+    const navigateToForgtoPassword = useCallback(() => {
+        console.log('bateu ');
+        navigate('ForgotPassword');
+    }, [navigate]);
+
     return (
         <KeyboardAvoidingView
             style={{ flex: 1 }}
@@ -74,11 +82,7 @@ const Login: React.FC = () => {
                             </ViewButton>
                         </Form>
 
-                        <ForgotPassword
-                            onPress={() => {
-                                console.log('esqueci :s');
-                            }}
-                        >
+                        <ForgotPassword onPress={navigateToForgtoPassword}>
                             <ForgotPasswordText>
                                 Esqueceu sua senha?
                             </ForgotPasswordText>

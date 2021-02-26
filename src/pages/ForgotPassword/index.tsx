@@ -9,17 +9,11 @@ import {
 } from 'react-native';
 import {
     Container,
-    ForgotPassword,
-    ForgotPasswordText,
     Form,
     Title,
     SubTitle,
     GroupInputs,
     ViewButton,
-    RegisterAccountText,
-    RegisterAccount,
-    RegisterAccountButton,
-    RegisterAccountButtonText,
     MainContent,
     SubTitleContent,
 } from './styles';
@@ -42,19 +36,7 @@ const Login: React.FC = () => {
                 <Container>
                     <Image source={logoImg} />
 
-                    <MainContent
-                        style={{
-                            shadowColor: colors.shadow,
-                            shadowOffset: {
-                                width: 0,
-                                height: 1,
-                            },
-                            shadowOpacity: 0.18,
-                            shadowRadius: 1.0,
-
-                            elevation: 1,
-                        }}
-                    >
+                    <MainContent>
                         <View style={{ alignItems: 'center', marginTop: 37 }}>
                             <Title>Forgot password</Title>
                             <SubTitleContent>
