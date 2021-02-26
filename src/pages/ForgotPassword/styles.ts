@@ -12,13 +12,6 @@ export const Container = styled.View`
     padding-top: ${Platform.OS === 'android' ? 150 : 40}px;
 `;
 
-export const Title = styled.Text`
-    font-size: 24px;
-    color: ${colors.blue};
-    font-weight: bold;
-    margin: 37px 0 6px;
-`;
-
 export const MainContent = styled.View`
     align-items: center;
     margin-top: 20%;
@@ -28,10 +21,22 @@ export const MainContent = styled.View`
     padding-bottom: 20%;
 `;
 
+export const Title = styled.Text`
+    font-size: 25px;
+    color: ${colors.blue};
+    font-weight: bold;
+    margin: 37px 0 6px;
+`;
+
+export const SubTitleContent = styled.View`
+    width: 80%;
+`;
+
 export const SubTitle = styled.Text`
     font-size: 14px;
     color: ${colors.subtitle};
     margin: 0px 0 48px;
+    text-align: center;
 `;
 
 export const GroupInputs = styled.View`

@@ -3,6 +3,7 @@ import { StatusBar } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Login from './pages/Login';
+import ForgotPassword from './pages/ForgotPassword';
 import colors from './styles/colors';
 
 const App = createStackNavigator();
@@ -15,9 +16,10 @@ const Routes: React.FC = () => (
                 backgroundColor: colors.primary,
             },
         }}
-        initialRouteName="SignIn"
+        initialRouteName="ForgotPassword"
     >
         <App.Screen name="SignIn" component={Login} />
+        <App.Screen name="ForgotPassword" component={ForgotPassword} />
     </App.Navigator>
 );
 
