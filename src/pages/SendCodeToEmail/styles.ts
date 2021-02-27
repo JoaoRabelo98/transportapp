@@ -41,7 +41,6 @@ export const ViewButton = styled.View`
 
 export const SvgStyled = styled.View`
     width: 80%;
-    background-color: #000;
     align-items: center;
     justify-content: center;
 `;

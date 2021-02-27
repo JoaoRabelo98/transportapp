@@ -1,6 +1,7 @@
 import React from 'react';
-import { KeyboardAvoidingView, ScrollView, Platform } from 'react-native';
+import { KeyboardAvoidingView, ScrollView, Platform, Image } from 'react-native';
 
+import SvgUri from 'react-native-svg-uri';
 import {
     Container,
     Title,
@@ -11,7 +12,7 @@ import {
 } from './styles';
 import colors from '../../styles/colors';
 import Button from '../../components/Button';
-import PadlockSvg from '../../assets/svgs/PadlockSvg';
+import padLockImg from '../../assets/PadLock.png';
 
 const Login: React.FC = () => {
     return (
@@ -26,9 +27,7 @@ const Login: React.FC = () => {
             >
                 <Container>
                     <MainContent>
-                        <SvgStyled>
-                            <PadlockSvg />
-                        </SvgStyled>
+                        <Image source={padLockImg} />
                         <Title>Enviamos um código para o seu email</Title>
                         <SubTitle>
                             Em breve, você receberá um e-mail com um código para
