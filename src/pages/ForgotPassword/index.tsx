@@ -6,6 +6,7 @@ import {
     ScrollView,
     Platform,
     View,
+    StatusBar,
 } from 'react-native';
 import {
     Container,

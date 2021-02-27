@@ -9,7 +9,6 @@ export const Container = styled.View`
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding-top: ${Platform.OS === 'android' ? 150 : 40}px;
 `;
 
 export const MainContent = styled.View`
