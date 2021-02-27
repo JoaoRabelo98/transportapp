@@ -15,4 +15,5 @@ export default {
     blue: '#3F577B',
     shadow: '#a1a1a1',
     icons: '#243668',
+    backgroud_modal: '#04040F66',
 };

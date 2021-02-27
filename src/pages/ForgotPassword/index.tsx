@@ -6,6 +6,7 @@ import {
     ScrollView,
     Platform,
     View,
+    StatusBar,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Feather as Icon } from '@expo/vector-icons';
