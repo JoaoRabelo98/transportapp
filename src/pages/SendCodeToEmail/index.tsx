@@ -1,18 +1,10 @@
 import React from 'react';
 import { KeyboardAvoidingView, ScrollView, Platform, Image } from 'react-native';
 
-import SvgUri from 'react-native-svg-uri';
-import {
-    Container,
-    Title,
-    SubTitle,
-    MainContent,
-    ViewButton,
-    SvgStyled,
-} from './styles';
-import colors from '../../styles/colors';
+import { Container, Title, SubTitle, MainContent, ViewButton } from './styles';
 import Button from '../../components/Button';
 import padLockImg from '../../assets/PadLock.png';
+import colors from '../../styles/colors';
 
 const Login: React.FC = () => {
     return (
@@ -26,7 +18,15 @@ const Login: React.FC = () => {
                 keyboardShouldPersistTaps="handled"
             >
                 <Container>
-                    <MainContent>
+                    <MainContent
+                        style={{
+                            shadowColor: colors.shadow,
+                            shadowOffset: { width: 1, height: 1 },
+                            shadowOpacity: 0.5,
+                            shadowRadius: 2,
+                            elevation: 150,
+                        }}
+                    >
                         <Image source={padLockImg} />
                         <Title>Enviamos um código para o seu email</Title>
                         <SubTitle>
@@ -35,7 +35,7 @@ const Login: React.FC = () => {
                         </SubTitle>
 
                         <ViewButton>
-                            <Button onPress={() => {}}>Entrar</Button>
+                            <Button onPress={() => {}}>Confirmar</Button>
                         </ViewButton>
                     </MainContent>
                 </Container>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import {
     Image,
@@ -6,7 +6,6 @@ import {
     ScrollView,
     Platform,
     View,
-    StatusBar,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Feather as Icon } from '@expo/vector-icons';
@@ -28,7 +27,12 @@ import logoImg from '../../assets/Logo.png';
 import colors from '../../styles/colors';
 
 const Login: React.FC = () => {
-    const { goBack } = useNavigation();
+    const { goBack, navigate } = useNavigation();
+
+    const navigateToSendCode = useCallback(() => {
+        navigate('SendCodeToEmail');
+    }, [navigate]);
+
     return (
         <KeyboardAvoidingView
             style={{ flex: 1 }}
@@ -57,7 +61,7 @@ const Login: React.FC = () => {
 
                     <MainContent>
                         <View style={{ alignItems: 'center', marginTop: 37 }}>
-                            <Title>Forgot password</Title>
+                            <Title>Esqueci minha senha</Title>
                             <SubTitleContent>
                                 <SubTitle>
                                     Por favor, indique o seu endereço de e-mail. Você
@@ -72,7 +76,9 @@ const Login: React.FC = () => {
                             </GroupInputs>
 
                             <ViewButton>
-                                <Button onPress={() => {}}>Entrar</Button>
+                                <Button onPress={navigateToSendCode}>
+                                    Redefinir Senha
+                                </Button>
                             </ViewButton>
                         </Form>
                     </MainContent>

@@ -32,7 +32,6 @@ const Login: React.FC = () => {
     const { navigate } = useNavigation();
 
     const navigateToForgtoPassword = useCallback(() => {
-        console.log('bateu ');
         navigate('ForgotPassword');
     }, [navigate]);
 

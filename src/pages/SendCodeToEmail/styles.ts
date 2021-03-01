@@ -1,10 +1,7 @@
 import styled from 'styled-components/native';
-import { Platform } from 'react-native';
-import { Form as Unform } from '@unform/mobile';
 import colors from '../../styles/colors';
 
 export const Container = styled.View`
-    background: ${colors.backgroud_modal};
     align-items: center;
     justify-content: center;
     width: 100%;
