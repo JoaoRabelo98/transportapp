@@ -16,4 +16,5 @@ export default {
     shadow: '#a1a1a1',
     icons: '#243668',
     backgroud_modal: '#04040F66',
+    black: '#000000',
 };

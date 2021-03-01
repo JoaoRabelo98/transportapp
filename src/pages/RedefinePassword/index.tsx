@@ -1,12 +1,6 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 
-import {
-    Image,
-    KeyboardAvoidingView,
-    ScrollView,
-    Platform,
-    View,
-} from 'react-native';
+import { KeyboardAvoidingView, ScrollView, Platform, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Feather as Icon } from '@expo/vector-icons';
 import {
@@ -23,15 +17,10 @@ import {
 } from './styles';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
-import logoImg from '../../assets/Logo.png';
 import colors from '../../styles/colors';
 
-const ForgotPassword: React.FC = () => {
-    const { goBack, navigate } = useNavigation();
-
-    const navigateToSendCode = useCallback(() => {
-        navigate('SendCodeToEmail');
-    }, [navigate]);
+const RedefinePassword: React.FC = () => {
+    const { goBack } = useNavigation();
 
     return (
         <KeyboardAvoidingView
@@ -48,7 +37,7 @@ const ForgotPassword: React.FC = () => {
                         <BackButton
                             style={{
                                 position: 'absolute',
-                                top: 0,
+                                top: 60,
                                 left: 28,
                             }}
                             onPress={goBack}
@@ -57,28 +46,30 @@ const ForgotPassword: React.FC = () => {
                         </BackButton>
                     </Header>
 
-                    <Image source={logoImg} />
-
                     <MainContent>
                         <View style={{ alignItems: 'center', marginTop: 37 }}>
-                            <Title>Esqueci minha senha</Title>
+                            <Title>Redefinir Senha</Title>
                             <SubTitleContent>
-                                <SubTitle>
-                                    Por favor, indique o seu endereço de e-mail. Você
-                                    recebera um código para criar uma nova senha
-                                </SubTitle>
+                                <SubTitle>Digite sua nova senha</SubTitle>
                             </SubTitleContent>
                         </View>
 
                         <Form onSubmit={() => {}}>
                             <GroupInputs>
-                                <Input style={{ height: 44 }} placeholder="E-mail" />
+                                <Input
+                                    style={{ height: 44 }}
+                                    placeholder="Senha"
+                                    secureTextEntry={true}
+                                />
+                                <Input
+                                    style={{ height: 44 }}
+                                    placeholder="Confirmar senha"
+                                    secureTextEntry={true}
+                                />
                             </GroupInputs>
 
                             <ViewButton>
-                                <Button onPress={navigateToSendCode}>
-                                    Redefinir Senha
-                                </Button>
+                                <Button>Confirmar</Button>
                             </ViewButton>
                         </Form>
                     </MainContent>
@@ -88,4 +79,4 @@ const ForgotPassword: React.FC = () => {
     );
 };
 
-export default ForgotPassword;
+export default RedefinePassword;
