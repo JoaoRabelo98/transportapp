@@ -66,7 +66,7 @@ const Login: React.FC = () => {
                             <SubTitle>Entre com seu e-mail e senha</SubTitle>
                         </View>
 
-                        <Form onSubmit={() => {}}>
+                        <Form onSubmit={() => console.log('submit')}>
                             <GroupInputs>
                                 <Input style={{ height: 44 }} placeholder="E-mail" />
                                 <Input
@@ -77,7 +77,9 @@ const Login: React.FC = () => {
                             </GroupInputs>
 
                             <ViewButton>
-                                <Button onPress={() => {}}>Entrar</Button>
+                                <Button onPress={() => console.log('entrar :s')}>
+                                    Entrar
+                                </Button>
                             </ViewButton>
                         </Form>
 
