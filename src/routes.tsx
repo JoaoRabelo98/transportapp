@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
 import SendCodeToEmail from './pages/SendCodeToEmail';
 import RedefinePassword from './pages/RedefinePassword';
+import SingUP from './pages/SingUP';
 import colors from './styles/colors';
 
 const App = createStackNavigator();
@@ -16,9 +17,10 @@ const Routes: React.FC = () => (
                 backgroundColor: colors.primary,
             },
         }}
-        initialRouteName="RedefinePassword"
+        initialRouteName="Login"
     >
         <App.Screen name="SignIn" component={Login} />
+        <App.Screen name="SingUP" component={SingUP} />
         <App.Screen name="ForgotPassword" component={ForgotPassword} />
         <App.Screen name="SendCodeToEmail" component={SendCodeToEmail} />
         <App.Screen name="RedefinePassword" component={RedefinePassword} />
