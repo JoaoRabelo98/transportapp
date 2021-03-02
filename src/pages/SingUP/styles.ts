@@ -31,7 +31,7 @@ export const Title = styled.Text`
     font-size: 25px;
     color: ${colors.button};
     font-weight: bold;
-    margin: 37px 0 6px;
+    margin: 0 0 37px;
 `;
 
 export const SubTitleContent = styled.View`
@@ -60,4 +60,15 @@ export const ViewButton = styled.View`
 export const Form = styled(Unform)`
     width: 100%;
     align-items: center;
+`;
+
+export const UserAvatarButton = styled.TouchableOpacity`
+    margin-top: 32px;
+`;
+
+export const UserAvatar = styled.Image`
+    width: 186px;
+    height: 186px;
+    border-radius: 98px;
+    align-self: center;
 `;

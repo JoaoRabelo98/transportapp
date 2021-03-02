@@ -14,10 +14,13 @@ import {
     SubTitleContent,
     BackButton,
     Header,
+    UserAvatarButton,
+    UserAvatar,
 } from './styles';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import colors from '../../styles/colors';
+import profileImg from '../../assets/profile/Profile.png';
 
 const SingUP: React.FC = () => {
     const { goBack } = useNavigation();
@@ -47,7 +50,11 @@ const SingUP: React.FC = () => {
                     </Header>
 
                     <MainContent>
-                        <View style={{ alignItems: 'center', marginTop: 37 }}>
+                        <UserAvatarButton>
+                            <UserAvatar source={profileImg} />
+                        </UserAvatarButton>
+
+                        <View style={{ alignItems: 'center' }}>
                             <Title>Criar uma conta</Title>
                         </View>
 
