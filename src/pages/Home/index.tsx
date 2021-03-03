@@ -1,17 +1,21 @@
 import React from 'react';
-import { KeyboardAvoidingView, ScrollView, Platform, View } from 'react-native';
+import { KeyboardAvoidingView, Platform, View } from 'react-native';
 
 import {
+    ScrollView,
     Container,
     Header,
     BackgroundImageStyled,
     DeliverymanImageStyled,
     WelcomeContent,
-    SubTitle,
-    Title,
+    WelcomeMessage,
+    PersonName,
     UserAvatarContent,
     UserAvatar,
     MegaphoneImgateStyled,
+    MainContent,
+    Title,
+    SubTitle,
 } from './styles';
 
 import profileImg from '../../assets/profile/ProfileHome.png';
@@ -26,26 +30,41 @@ const Home: React.FC = () => {
             behavior={Platform.OS === 'ios' ? 'padding' : undefined}
             enabled
         >
-            <ScrollView
-                contentContainerStyle={{ flex: 1 }}
-                keyboardShouldPersistTaps="handled"
-            >
+            <ScrollView keyboardShouldPersistTaps="handled">
                 <Container>
                     <Header>
                         <WelcomeContent>
                             <View style={{ flex: 1 }}>
-                                <SubTitle>Seja bem vindo Claudinei!</SubTitle>
-                                <SubTitle>Como podemos ajuda-lo hoje?</SubTitle>
+                                <WelcomeMessage>
+                                    Seja bem vindo Claudinei!
+                                </WelcomeMessage>
+                                <WelcomeMessage>
+                                    Como podemos ajuda-lo hoje?
+                                </WelcomeMessage>
                             </View>
                             <MegaphoneImgateStyled source={MegaphoneImg} />
                         </WelcomeContent>
                         <UserAvatarContent>
                             <UserAvatar source={profileImg} />
-                            <Title>Claudinei Silva</Title>
+                            <PersonName>Claudinei Silva</PersonName>
                         </UserAvatarContent>
                     </Header>
                     <BackgroundImageStyled source={BackgroundImage1} />
                     <DeliverymanImageStyled source={DeliverymanImage} />
+                    <MainContent>
+                        <Title>Fique tranquilo</Title>
+                        <SubTitle>
+                            Insira o número da etiqueta ou escanei o código para{' '}
+                            <SubTitle style={{ textDecorationLine: 'underline' }}>
+                                rastrear
+                            </SubTitle>{' '}
+                            ou{' '}
+                            <SubTitle style={{ textDecorationLine: 'underline' }}>
+                                registrar
+                            </SubTitle>{' '}
+                            um item
+                        </SubTitle>
+                    </MainContent>
                 </Container>
             </ScrollView>
         </KeyboardAvoidingView>
