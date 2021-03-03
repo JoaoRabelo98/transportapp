@@ -17,6 +17,9 @@ import {
     Title,
     SubTitle,
     InputQRCodeContent,
+    CardsContent,
+    CardImage,
+    CardTitle,
 } from './styles';
 
 import profileImg from '../../assets/profile/ProfileHome.png';
@@ -24,6 +27,10 @@ import MegaphoneImg from '../../assets/Home/Megaphone.png';
 import BackgroundImage1 from '../../assets/Home/BackgroundImage1.png';
 import DeliverymanImage from '../../assets/Home/BackgroundImage2.png';
 import InputQRCode from '../../components/InputQRCode';
+import ServiceCard from '../../components/ServiceCard';
+import ServiceCardDelivery from '../../assets/ServiceCards/ServiceCardDelivery.png';
+import ServiceCardMalote from '../../assets/ServiceCards/ServiceCardMalote.png';
+import ServiceCardMensageria from '../../assets/ServiceCards/ServiceCardMensageria.png';
 
 const Home: React.FC = () => {
     return (
@@ -69,6 +76,23 @@ const Home: React.FC = () => {
                         <InputQRCodeContent>
                             <InputQRCode placeholder="Insira ou escaneie o código da etiqueta" />
                         </InputQRCodeContent>
+                        <Title style={{ marginTop: 20 }}>
+                            Conheça nossos serviços
+                        </Title>
+                        <CardsContent>
+                            <ServiceCard>
+                                <CardImage source={ServiceCardDelivery} />
+                                <CardTitle>Delivery</CardTitle>
+                            </ServiceCard>
+                            <ServiceCard>
+                                <CardImage source={ServiceCardMalote} />
+                                <CardTitle>Malote</CardTitle>
+                            </ServiceCard>
+                            <ServiceCard>
+                                <CardImage source={ServiceCardMensageria} />
+                                <CardTitle>Mensageria</CardTitle>
+                            </ServiceCard>
+                        </CardsContent>
                     </MainContent>
                 </Container>
             </ScrollView>
