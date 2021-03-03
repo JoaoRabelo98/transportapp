@@ -93,3 +93,20 @@ export const SubTitle = styled.Text`
 export const InputQRCodeContent = styled.View`
     margin-top: 20px;
 `;
+
+export const CardsContent = styled.View`
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+`;
+
+export const CardImage = styled.Image`
+    width: 65px;
+    height: 65px;
+`;
+
+export const CardTitle = styled.Text`
+    margin-top: 10px;
+    font-size: 13px;
+    color: ${colors.black};
+`;
