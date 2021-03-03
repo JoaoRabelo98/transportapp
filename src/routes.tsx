@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
 import SendCodeToEmail from './pages/SendCodeToEmail';
 import RedefinePassword from './pages/RedefinePassword';
+import SingUP from './pages/SingUP';
 import colors from './styles/colors';
 import PhoneVerification from './pages/PhoneVerification';
 
@@ -20,6 +21,7 @@ const Routes: React.FC = () => (
         initialRouteName="SignIn"
     >
         <App.Screen name="SignIn" component={Login} />
+        <App.Screen name="SingUP" component={SingUP} />
         <App.Screen name="ForgotPassword" component={ForgotPassword} />
         <App.Screen name="SendCodeToEmail" component={SendCodeToEmail} />
         <App.Screen name="RedefinePassword" component={RedefinePassword} />

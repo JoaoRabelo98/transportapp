@@ -31,8 +31,12 @@ import logoImg from '../../assets/Logo.png';
 const Login: React.FC = () => {
     const { navigate } = useNavigation();
 
-    const navigateToForgtoPassword = useCallback(() => {
+    const navigateToForgtotPassword = useCallback(() => {
         navigate('ForgotPassword');
+    }, [navigate]);
+
+    const navigateToSingUP = useCallback(() => {
+        navigate('SingUP');
     }, [navigate]);
 
     return (
@@ -83,7 +87,7 @@ const Login: React.FC = () => {
                             </ViewButton>
                         </Form>
 
-                        <ForgotPassword onPress={navigateToForgtoPassword}>
+                        <ForgotPassword onPress={navigateToForgtotPassword}>
                             <ForgotPasswordText>
                                 Esqueceu sua senha?
                             </ForgotPasswordText>
@@ -97,7 +101,9 @@ const Login: React.FC = () => {
                             >
                                 <RegisterAccountText>
                                     Não possui uma conta?
-                                    <RegisterAccountButtonText>
+                                    <RegisterAccountButtonText
+                                        onPress={navigateToSingUP}
+                                    >
                                         {' '}
                                         Cadastre-se
                                     </RegisterAccountButtonText>
