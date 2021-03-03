@@ -4,6 +4,7 @@ export default {
     text_bellow_input: '#333333',
     place_holder: '#55606D',
     text_link: '#0B1A43',
+    dark_text_link: '#021744',
     button: '#3F577B',
     subtitle: '#858585',
     icon_modal: '#445678',
@@ -17,4 +18,5 @@ export default {
     icons: '#243668',
     backgroud_modal: '#04040F66',
     black: '#000000',
+    light_gray: '#666666',
 };

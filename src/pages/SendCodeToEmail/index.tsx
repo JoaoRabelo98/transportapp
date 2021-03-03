@@ -10,7 +10,7 @@ import colors from '../../styles/colors';
 const ModalSendCodeToEmail: React.FC = () => {
     const { navigate } = useNavigation();
     const navigateToPhoneVerification = useCallback(() => {
-        navigate('RedefinePassword');
+        navigate('PhoneVerification');
     }, [navigate]);
 
     return (
