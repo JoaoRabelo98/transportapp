@@ -31,6 +31,10 @@ import logoImg from '../../assets/Logo.png';
 const Login: React.FC = () => {
     const { navigate } = useNavigation();
 
+    const navigateToHome = useCallback(() => {
+        navigate('TabNavigator');
+    }, [navigate]);
+
     const navigateToForgtotPassword = useCallback(() => {
         navigate('ForgotPassword');
     }, [navigate]);
@@ -81,9 +85,7 @@ const Login: React.FC = () => {
                             </GroupInputs>
 
                             <ViewButton>
-                                <Button onPress={() => console.log('entrar :s')}>
-                                    Entrar
-                                </Button>
+                                <Button onPress={navigateToHome}>Entrar</Button>
                             </ViewButton>
                         </Form>
 
