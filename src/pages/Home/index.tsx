@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyboardAvoidingView, ScrollView, Platform } from 'react-native';
+import { KeyboardAvoidingView, ScrollView, Platform, View } from 'react-native';
 
 import {
     Container,
@@ -7,12 +7,15 @@ import {
     BackgroundImageStyled,
     DeliverymanImageStyled,
     WelcomeContent,
+    SubTitle,
     Title,
-    UserAvatarButton,
+    UserAvatarContent,
     UserAvatar,
+    MegaphoneImgateStyled,
 } from './styles';
 
 import profileImg from '../../assets/profile/ProfileHome.png';
+import MegaphoneImg from '../../assets/Home/Megaphone.png';
 import BackgroundImage1 from '../../assets/Home/BackgroundImage1.png';
 import DeliverymanImage from '../../assets/Home/BackgroundImage2.png';
 
@@ -29,11 +32,17 @@ const Home: React.FC = () => {
             >
                 <Container>
                     <Header>
-                        <WelcomeContent></WelcomeContent>
-                        <UserAvatarButton>
+                        <WelcomeContent>
+                            <View style={{ flex: 1 }}>
+                                <SubTitle>Seja bem vindo Claudinei!</SubTitle>
+                                <SubTitle>Como podemos ajuda-lo hoje?</SubTitle>
+                            </View>
+                            <MegaphoneImgateStyled source={MegaphoneImg} />
+                        </WelcomeContent>
+                        <UserAvatarContent>
                             <UserAvatar source={profileImg} />
                             <Title>Claudinei Silva</Title>
-                        </UserAvatarButton>
+                        </UserAvatarContent>
                     </Header>
                     <BackgroundImageStyled source={BackgroundImage1} />
                     <DeliverymanImageStyled source={DeliverymanImage} />

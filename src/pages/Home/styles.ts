@@ -15,8 +15,9 @@ export const Header = styled.View`
     align-items: center;
 `;
 
-export const UserAvatarButton = styled.View`
-    margin-top: -115px;
+export const UserAvatarContent = styled.View`
+    position: absolute;
+    margin-top: 35px;
     align-self: flex-start;
     margin-left: 10%;
     flex-direction: row;
@@ -36,12 +37,25 @@ export const Title = styled.Text`
 
 export const WelcomeContent = styled.View`
     margin-top: 60px;
+    padding: 10px 10px 0 75px;
     width: 80%;
-    height: 94px;
     border-radius: 10px;
-    position: relative;
-    background-color: #000;
+    background: ${colors.primary};
+    flex-direction: row;
+    justify-content: space-between;
 `;
+
+export const SubTitle = styled.Text`
+    font-size: 14px;
+    color: ${colors.subtitle};
+`;
+
+export const MegaphoneImgateStyled = styled.Image`
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+`;
+
 export const BackgroundImageStyled = styled.Image`
     margin-top: -63px;
     width: 100%;
