@@ -74,7 +74,7 @@ const Login: React.FC = () => {
                             <SubTitle>Entre com seu e-mail e senha</SubTitle>
                         </View>
 
-                        <Form onSubmit={() => {}}>
+                        <Form onSubmit={() => console.log('submit')}>
                             <GroupInputs>
                                 <Input style={{ height: 44 }} placeholder="E-mail" />
                                 <Input

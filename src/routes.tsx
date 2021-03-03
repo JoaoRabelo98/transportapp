@@ -7,6 +7,7 @@ import RedefinePassword from './pages/RedefinePassword';
 import SingUP from './pages/SingUP';
 import TabNavigator from './pages/TabNavigator';
 import colors from './styles/colors';
+import PhoneVerification from './pages/PhoneVerification';
 
 const App = createStackNavigator();
 
@@ -18,7 +19,7 @@ const Routes: React.FC = () => (
                 backgroundColor: colors.primary,
             },
         }}
-        initialRouteName="Login"
+        initialRouteName="SignIn"
     >
         <App.Screen name="SignIn" component={Login} />
         <App.Screen name="SingUP" component={SingUP} />
@@ -26,6 +27,7 @@ const Routes: React.FC = () => (
         <App.Screen name="SendCodeToEmail" component={SendCodeToEmail} />
         <App.Screen name="RedefinePassword" component={RedefinePassword} />
         <App.Screen name="TabNavigator" component={TabNavigator} />
+        <App.Screen name="PhoneVerification" component={PhoneVerification} />
     </App.Navigator>
 );
 

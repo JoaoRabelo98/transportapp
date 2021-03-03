@@ -70,7 +70,11 @@ const ForgotPassword: React.FC = () => {
                             </SubTitleContent>
                         </View>
 
-                        <Form onSubmit={() => {}}>
+                        <Form
+                            onSubmit={() => {
+                                console.log('submit');
+                            }}
+                        >
                             <GroupInputs>
                                 <Input style={{ height: 44 }} placeholder="E-mail" />
                             </GroupInputs>
