@@ -76,10 +76,26 @@ const PhoneVerification: React.FC = () => {
                             }}
                         >
                             <GroupInputs>
-                                <Input style={{ height: 44, width: 44 }} />
-                                <Input style={{ height: 44, width: 44 }} />
-                                <Input style={{ height: 44, width: 44 }} />
-                                <Input style={{ height: 44, width: 44 }} />
+                                <Input
+                                    keyboardType="numeric"
+                                    maxLength={1}
+                                    style={{ height: 44, width: 44 }}
+                                />
+                                <Input
+                                    keyboardType="numeric"
+                                    maxLength={1}
+                                    style={{ height: 44, width: 44 }}
+                                />
+                                <Input
+                                    keyboardType="numeric"
+                                    maxLength={1}
+                                    style={{ height: 44, width: 44 }}
+                                />
+                                <Input
+                                    keyboardType="numeric"
+                                    maxLength={1}
+                                    style={{ height: 44, width: 44 }}
+                                />
                             </GroupInputs>
                             <ViewRegressive>
                                 <RegressiveText>04:00</RegressiveText>
