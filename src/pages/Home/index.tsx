@@ -6,8 +6,13 @@ import {
     Header,
     BackgroundImageStyled,
     DeliverymanImageStyled,
+    WelcomeContent,
+    Title,
+    UserAvatarButton,
+    UserAvatar,
 } from './styles';
 
+import profileImg from '../../assets/profile/ProfileHome.png';
 import BackgroundImage1 from '../../assets/Home/BackgroundImage1.png';
 import DeliverymanImage from '../../assets/Home/BackgroundImage2.png';
 
@@ -23,7 +28,13 @@ const Home: React.FC = () => {
                 keyboardShouldPersistTaps="handled"
             >
                 <Container>
-                    <Header></Header>
+                    <Header>
+                        <WelcomeContent></WelcomeContent>
+                        <UserAvatarButton>
+                            <UserAvatar source={profileImg} />
+                            <Title>Claudinei Silva</Title>
+                        </UserAvatarButton>
+                    </Header>
                     <BackgroundImageStyled source={BackgroundImage1} />
                     <DeliverymanImageStyled source={DeliverymanImage} />
                 </Container>

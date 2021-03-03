@@ -4,22 +4,47 @@ import colors from '../../styles/colors';
 export const Container = styled.View`
     flex: 1;
     background: ${colors.primary};
-    /* background-color: #000; */
     width: 100%;
 `;
 
 export const Header = styled.View`
-    padding-top: 113px;
-    margin-top: 0;
     width: 100%;
     height: 94px;
     position: relative;
     background: ${colors.button};
+    align-items: center;
 `;
 
+export const UserAvatarButton = styled.View`
+    margin-top: -115px;
+    align-self: flex-start;
+    margin-left: 10%;
+    flex-direction: row;
+`;
+
+export const UserAvatar = styled.Image`
+    width: 65px;
+    height: 65px;
+    border-radius: 35px;
+`;
+
+export const Title = styled.Text`
+    margin-left: 10px;
+    font-size: 18px;
+    color: ${colors.primary};
+`;
+
+export const WelcomeContent = styled.View`
+    margin-top: 60px;
+    width: 80%;
+    height: 94px;
+    border-radius: 10px;
+    position: relative;
+    background-color: #000;
+`;
 export const BackgroundImageStyled = styled.Image`
-    width: 100%;
     margin-top: -63px;
+    width: 100%;
     height: 308px;
 `;
 
