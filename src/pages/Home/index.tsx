@@ -16,12 +16,14 @@ import {
     MainContent,
     Title,
     SubTitle,
+    InputQRCodeContent,
 } from './styles';
 
 import profileImg from '../../assets/profile/ProfileHome.png';
 import MegaphoneImg from '../../assets/Home/Megaphone.png';
 import BackgroundImage1 from '../../assets/Home/BackgroundImage1.png';
 import DeliverymanImage from '../../assets/Home/BackgroundImage2.png';
+import InputQRCode from '../../components/InputQRCode';
 
 const Home: React.FC = () => {
     return (
@@ -64,6 +66,9 @@ const Home: React.FC = () => {
                             </SubTitle>{' '}
                             um item
                         </SubTitle>
+                        <InputQRCodeContent>
+                            <InputQRCode placeholder="Insira ou escaneie o código da etiqueta" />
+                        </InputQRCodeContent>
                     </MainContent>
                 </Container>
             </ScrollView>

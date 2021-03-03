@@ -17,4 +17,5 @@ export default {
     icons: '#243668',
     backgroud_modal: '#04040F66',
     black: '#000000',
+    border_qrcode_input: '#707070',
 };

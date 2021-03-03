@@ -89,3 +89,7 @@ export const SubTitle = styled.Text`
     font-size: 13px;
     color: ${colors.black};
 `;
+
+export const InputQRCodeContent = styled.View`
+    margin-top: 20px;
+`;
