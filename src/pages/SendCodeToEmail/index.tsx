@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Image } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
 import { Container, Title, SubTitle, MainContent, ViewButton } from './styles';
 import Button from '../../components/Button';
 import padLockImg from '../../assets/PadLock.png';
 import colors from '../../styles/colors';
 
 const ModalSendCodeToEmail: React.FC = () => {
+    const { navigate } = useNavigation();
+    const navigateToPhoneVerification = useCallback(() => {
+        navigate('RedefinePassword');
+    }, [navigate]);
+
     return (
         <Container>
             <MainContent
@@ -26,13 +32,7 @@ const ModalSendCodeToEmail: React.FC = () => {
                 </SubTitle>
 
                 <ViewButton>
-                    <Button
-                        onPress={() => {
-                            console.log('confirmado');
-                        }}
-                    >
-                        Confirmar
-                    </Button>
+                    <Button onPress={navigateToPhoneVerification}>Confirmar</Button>
                 </ViewButton>
             </MainContent>
         </Container>
